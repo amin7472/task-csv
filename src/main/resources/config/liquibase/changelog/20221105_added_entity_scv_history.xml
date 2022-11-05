@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="20221105-1" author="amin">
+        <createTable tableName="csv_history">
+            <column name="csv_id" type="number">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="source" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="code_list_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="display_value" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="long_description" type="varchar(2000)">
+                <constraints nullable="true" />
+            </column>
+            <column name="from_date" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="to_date" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sorting_priority" type="number">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+
+
+    </changeSet>
+
+
+
+</databaseChangeLog>
